@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import data from '../assets/Lab3-timetable-data.json';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'lab4';
+  title = 'se3316-dbromle2-lab4';
 }
