@@ -1,2 +1,23 @@
-<h2>{{course.subject}} {{course.catalog_nbr}}</h2>
-<div><span>Course component: </span>{{course.component}}</div>
+<h2>Courses</h2>
+<ul class="courses">
+    <li *ngFor="let course of courses"
+        [class.selected]="course === selectedCourse"
+        (click)="onSelect(course)">
+        <span class="id">{{course.subject}}{{course.catalog_nbr}}</span> {{course.name}}, {{course.component}}
+    </li>
+</ul>
+
+<div *ngIf="selectedCourse">
+    <h2>{{selectedCourse.name}} Details</h2>
+    <div><span>course: </span>{{selectedCourse.subject}}{{selectedCourse.catalog_nbr}}</div>
+    <div>
+        <div>name:
+            {{selectedCourse.name}}
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <h2>{{course.subject}} {{course.catalog_nbr}}</h2>
+<div><span>Course component: </span>{{course.component}}</div> -->
