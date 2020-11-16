@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import data from '../assets/Lab3-timetable-data.json';
 
 @Component({
   selector: 'app-root',
