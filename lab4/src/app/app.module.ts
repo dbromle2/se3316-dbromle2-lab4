@@ -8,6 +8,7 @@ import { SchedulesComponent } from './schedules/schedules.component';
 import { FormsModule } from "@angular/forms";
 import { CourseDetailComponent } from './course-detail/course-detail.component'; // <-- NgModel lives here
 import { HttpClientModule } from '@angular/common/http';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     CoursesComponent,
     SchedulesComponent,
     CourseDetailComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
