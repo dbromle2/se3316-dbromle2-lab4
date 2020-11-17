@@ -3,18 +3,18 @@
     <li *ngFor="let course of courses"
         [class.selected]="course === selectedCourse"
         (click)="onSelect(course)">
-        <span class="id">{{course.subject}}{{course.catalog_nbr}}</span> {{course.name}}, {{course.component}}
+        <span class="id">{{course.subject}}{{course.catalog_nbr}}</span> {{course.className}}, {{course.ssr_component}}
     </li>
 </ul>
 
 <!-- <app-course-detail [course]="selectedCourse"></app-course-detail> -->
 
 <div *ngIf="selectedCourse">
-    <h2>{{selectedCourse.name}} Details</h2>
+    <h2>{{selectedCourse.className}} Details</h2>
     <div><span>course: </span>{{selectedCourse.subject}}{{selectedCourse.catalog_nbr}}</div>
     <div>
         <div>name:
-            {{selectedCourse.name}}
+            {{selectedCourse.className}}
         </div>
     </div>
 </div>

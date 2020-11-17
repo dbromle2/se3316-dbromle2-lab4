@@ -19,10 +19,10 @@ let sData = JSON.parse(rawScheduleData);
 //allow for parsing json for POSTs
 app.use(express.json());
 
-//load the index.html page
-router.get("/api/", (req,res)=>{
-    res.sendFile("./lab4/src/app/app.component.html", {root: __dirname});
-});
+// //load the index.html page
+// router.get("/api/", (req,res)=>{
+//     res.sendFile("./lab4/src/app/app.component.html", {root: __dirname});
+// });
 
 /*--------------- GETs ---------------*/
 
