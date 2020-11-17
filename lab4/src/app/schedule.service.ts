@@ -11,9 +11,9 @@ export class ScheduleService {
 
   constructor(private messageService: MessageService) { }
 
-  getCourses(): Observable<Schedule[]> {
-    //TODO: send the message _after_ fetching the courses
-    this.messageService.add("ScheduleService: fetched schedules");
-    return of(COURSES);
-  }
+  // getCourses(): Observable<Schedule[]> {
+  //   //TODO: send the message _after_ fetching the courses
+  //   this.messageService.add("ScheduleService: fetched schedules");
+  //   return of(COURSES);
+  // }
 }

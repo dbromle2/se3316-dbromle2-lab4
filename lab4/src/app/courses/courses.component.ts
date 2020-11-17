@@ -18,15 +18,30 @@ export class CoursesComponent implements OnInit {
   constructor(private courseService: CourseService, private messageService: MessageService) { }
 
   ngOnInit(): void {
-    this.getCourses();
+    // this.getCourses();
   }
 
   onSelect(course: Course): void{
     this.selectedCourse = course;
     this.messageService.add(`CoursesComponent: Selected course id=${course.subject}${course.catalog_nbr}`);
+    //this.getCourse(course.subject);
+  }
+
+  onSearch(): void {
+    let subSel = (<HTMLInputElement>document.getElementById("subjectInput")).value;
+    let corSel = (<HTMLInputElement>document.getElementById("catalogInput")).value;
+    let comSel = (<HTMLInputElement>document.getElementById("componentInput")).value;
+
+    console.log("Server sent these inputs:  " + subSel + " " + corSel + " " + comSel + " "); //testing
+
+    this.getCourses();
   }
 
   getCourses(): void {
     this.courseService.getCourses().subscribe(courses => this.courses = courses);
   }
+
+  // getCourse(course: Course): void {
+  //   this.courseService.getCourse(course.subject).subscribe(courses => this.courses = courses);
+  // }
 }

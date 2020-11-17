@@ -23,6 +23,9 @@ app.use(express.json());
 // router.get("/api/", (req,res)=>{
 //     res.sendFile("./lab4/src/app/app.component.html", {root: __dirname});
 // });
+// app.get("/api/", (req,res)=>{
+//     res.sendFile("./lab4/src/index.html", {root: __dirname});
+// });
 
 /*--------------- GETs ---------------*/
 
@@ -31,7 +34,7 @@ app.get("/api/courses", (req,res)=>{
     let myArr = [];
 
     for(var i=0; i < courses.length; i++){
-        myArr[i] = courses[i].subject + " " + courses[i].className;
+        myArr[i] = courses[i].subject + " " + courses[i].catalog_nbr + " " + courses[i].className + " " + courses[i].course_info[0].ssr_component;
     }
 
     res.send(myArr);
