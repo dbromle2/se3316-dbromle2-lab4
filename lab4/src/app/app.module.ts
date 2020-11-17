@@ -2,18 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-
-import { HttpClientModule } from '@angular/common/http';
 import { CoursesComponent } from './courses/courses.component';
 import { SchedulesComponent } from './schedules/schedules.component';
 
-import { FormsModule } from "@angular/forms"; // <-- NgModel lives here
+import { FormsModule } from "@angular/forms";
+import { CourseDetailComponent } from './course-detail/course-detail.component'; // <-- NgModel lives here
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
     SchedulesComponent,
+    CourseDetailComponent,
   ],
   imports: [
     BrowserModule,

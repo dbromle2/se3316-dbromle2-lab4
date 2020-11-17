@@ -7,6 +7,8 @@
     </li>
 </ul>
 
+<!-- <app-course-detail [course]="selectedCourse"></app-course-detail> -->
+
 <div *ngIf="selectedCourse">
     <h2>{{selectedCourse.name}} Details</h2>
     <div><span>course: </span>{{selectedCourse.subject}}{{selectedCourse.catalog_nbr}}</div>
@@ -16,7 +18,6 @@
         </div>
     </div>
 </div>
-
 
 
 <!-- <h2>{{course.subject}} {{course.catalog_nbr}}</h2>
