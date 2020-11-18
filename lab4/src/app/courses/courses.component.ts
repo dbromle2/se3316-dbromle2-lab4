@@ -34,14 +34,14 @@ export class CoursesComponent implements OnInit {
 
     console.log("Server sent these inputs:  " + subSel + " " + corSel + " " + comSel + " "); //testing
 
-    this.getCourses();
+    this.getCourse(subSel, corSel);
   }
 
   getCourses(): void {
     this.courseService.getCourses().subscribe(courses => this.courses = courses);
   }
-
-  // getCourse(course: Course): void {
-  //   this.courseService.getCourse(course.subject).subscribe(courses => this.courses = courses);
-  // }
+  
+  getCourse(subject: string, catalog_nbr: string): void {
+    this.courseService.getCourses(/*subject: string, catalog_nbr: string*/).subscribe(courses => this.courses = courses);
+  }
 }

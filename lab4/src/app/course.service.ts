@@ -24,10 +24,10 @@ export class CourseService {
   }
 
   /**GET course by subject code, will 400 if not found **/
-  // getCourse(subject: string): Observable<Course>{
-  //   const url = `${this.coursesUrl}/${subject}`;
-  //   return this.http.get<Course>(url).pipe(tap(_ => this.log(`fetched course codes for given subject=${subject}`)), catchError(this.handleError<Course>(`getCourse subject=${subject}`)));
-  // }
+  getCourse(subject: string, catalog_nbr: string): Observable<Course>{
+    const url = `${this.coursesUrl}/${subject}/${catalog_nbr}`;
+    return this.http.get<Course>(url)/*.pipe(tap(_ => this.log(`fetched course codes for given subject=${subject}`)), catchError(this.handleError<Course>(`getCourse subject=${subject}`)));*/
+  }
 
   private log(message: string) {
     this.messageService.add(`CourseService: ${message}`);
